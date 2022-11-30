@@ -1,7 +1,7 @@
 # 다리 건너기
 
 ## 기능 목록
-- [ ] 다리의 길이 입력 기능 -InputView#readBridgeSize()
+- [x] 다리의 길이 입력 기능 -InputView#readBridgeSize()
 - [ ] 다리 생성 기능 -BridgeMaker#makeBridge()
 - [ ] 이동할 칸 입력 기능 -InputView#readMoving()
 - [ ] 이동 기능 -BridgeGame#move()
