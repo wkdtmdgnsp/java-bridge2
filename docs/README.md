@@ -5,7 +5,7 @@
 - [x] 다리 생성 기능 -BridgeMaker#makeBridge()
 - [x] 이동할 칸 입력 기능 -InputView#readMoving()
 - [x] 이동 기능 -BridgeGame#move()
-- [ ] 진행중인 다리 출력 기능 -OutputView#printMap()
+- [x] 진행중인 다리 출력 기능 -OutputView#printMap()
 - [ ] 재시도 입력 기능 -InputView#readGameCommand()
 - [ ] 재시도 기능 -BridgeGame#retry()
 - [ ] 최종 결과 출력 기능 -OutputView#printResult()

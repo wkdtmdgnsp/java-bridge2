@@ -5,12 +5,14 @@ import bridge.BridgeNumberGenerator;
 import bridge.BridgeRandomNumberGenerator;
 import bridge.model.BridgeGame;
 import bridge.view.InputView;
+import bridge.view.OutputView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BridgeController {
     private InputView inputView = new InputView();
+    private OutputView outputView = new OutputView();
     private List<String> bridge = new ArrayList<>();
     private BridgeGame bridgeGame = new BridgeGame();
 
@@ -18,6 +20,8 @@ public class BridgeController {
         System.out.println("다리 건너기 게임을 시작합니다.\n");
         bridgeMake();
         move();
+        printGame();
+
     }
 
     public void bridgeMake() {
@@ -39,5 +43,9 @@ public class BridgeController {
         } catch (IllegalArgumentException e) {
             move();
         }
+    }
+
+    public void printGame() {
+        outputView.printMap(bridgeGame);
     }
 }
