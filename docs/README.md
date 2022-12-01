@@ -12,6 +12,7 @@
 - [x] 다리 길이 입력 예외 처리 기능 -UserException#bridgeSizeException()
   - [x] 숫자가 아닌 경우 -UserException#bridgeSizeNumberException()
   - [x] 범위를 벗어난 경우 -UserException#bridgeSizeRangeException()
+- [ ] 이동할 칸 입력 예외 처리 기능 -UserException#movingException()
 
 ## 기능 요구 사항
 위아래 둘 중 하나의 칸만 건널 수 있는 다리를 끝까지 건너가는 게임이다.
