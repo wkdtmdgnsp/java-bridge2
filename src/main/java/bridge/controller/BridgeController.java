@@ -15,6 +15,7 @@ public class BridgeController {
     public void run() {
         System.out.println("다리 건너기 게임을 시작합니다.\n");
         bridgeMake();
+        move();
     }
 
     public void bridgeMake() {
@@ -29,6 +30,11 @@ public class BridgeController {
     }
 
     public void move() {
-        System.out.println("이동할 칸을 선택해주세요. (위: U, 아래: D)");
+        try {
+            System.out.println("이동할 칸을 선택해주세요. (위: U, 아래: D)");
+            String move = inputView.readMoving();
+        } catch (IllegalArgumentException e) {
+            move();
+        }
     }
 }
