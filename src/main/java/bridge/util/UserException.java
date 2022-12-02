@@ -34,4 +34,11 @@ public class UserException {
             throw new IllegalArgumentException();
         }
     }
+
+    public void retryException(String retry) {
+        if (!retry.contentEquals("R") && !retry.contentEquals("Q")) {
+            System.out.println("[ERROR] R 또는 Q를 입력 해주세요.");
+            throw new IllegalArgumentException();
+        }
+    }
 }
