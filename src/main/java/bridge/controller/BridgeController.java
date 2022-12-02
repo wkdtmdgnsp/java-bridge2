@@ -45,4 +45,13 @@ public class BridgeController {
             move();
         }
     }
+
+    public void retry() {
+        try {
+            String reGame = inputView.readGameCommand();
+        } catch (IllegalArgumentException e) {
+            retry();
+        }
+
+    }
 }
