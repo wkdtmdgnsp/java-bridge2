@@ -30,23 +30,23 @@ public class BridgeGame {
 
     private void moveUp(String move) {
         if (move.contentEquals("U")) {
-            up.add("O");
-            down.add(" ");
+            up.add(" O ");
+            down.add("   ");
             return;
         }
-        up.add(" ");
-        down.add("X");
+        up.add("   ");
+        down.add(" X ");
         gameContinue = false;
     }
 
     private void moveDown(String move) {
         if (move.contentEquals("D")) {
-            up.add(" ");
-            down.add("O");
+            up.add("   ");
+            down.add(" O ");
             return;
         }
-        up.add("X");
-        down.add(" ");
+        up.add(" X ");
+        down.add("   ");
         gameContinue = false;
     }
 
