@@ -29,6 +29,7 @@ public class InputView {
      */
     public String readMoving() {
         try {
+            System.out.println("이동할 칸을 선택해주세요. (위: U, 아래: D)");
             String move = Console.readLine();
             userException.movingException(move);
             return move;
@@ -42,6 +43,7 @@ public class InputView {
      */
     public String readGameCommand() {
         try {
+            System.out.println("게임을 다시 시도할지 여부를 입력해주세요. (재시도: R, 종료: Q)");
             String retry = Console.readLine();
             userException.retryException(retry);
             return retry;

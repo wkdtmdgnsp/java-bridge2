@@ -37,10 +37,12 @@ public class BridgeController {
 
     public void move() {
         try {
-            System.out.println("이동할 칸을 선택해주세요. (위: U, 아래: D)");
             String move = inputView.readMoving();
             bridgeGame.move(bridge, move);
             outputView.printMap(bridgeGame);
+            if (!bridgeGame.isGameContinue()) {
+                retry();
+            }
         } catch (IllegalArgumentException e) {
             move();
         }
@@ -49,9 +51,12 @@ public class BridgeController {
     public void retry() {
         try {
             String reGame = inputView.readGameCommand();
+            if (reGame.contentEquals("R")) {
+                bridgeGame.retry();
+                return;
+            }
         } catch (IllegalArgumentException e) {
             retry();
         }
-
     }
 }
