@@ -10,6 +10,7 @@ public class BridgeGame {
     private List<String> up = new ArrayList<>();
     private List<String> down = new ArrayList<>();
     private int count = 0;
+    private int gameCount = 1;
     private boolean gameContinue = true;
 
     /**
@@ -61,6 +62,10 @@ public class BridgeGame {
         return gameContinue;
     }
 
+    public int getGameCount() {
+        return gameCount;
+    }
+
     /**
      * 사용자가 게임을 다시 시도할 때 사용하는 메서드
      * <p>
@@ -71,5 +76,6 @@ public class BridgeGame {
         up = new ArrayList<>();
         down = new ArrayList<>();
         count = 0;
+        gameCount++;
     }
 }
