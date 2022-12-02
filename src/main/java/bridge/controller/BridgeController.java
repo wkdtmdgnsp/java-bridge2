@@ -22,6 +22,7 @@ public class BridgeController {
         while (bridgeGame.isGameContinue() && bridge.size() > bridgeGame.getUp().size()) {
             move();
         }
+        printResult(bridgeGame);
     }
 
     public void bridgeMake() {
@@ -58,5 +59,9 @@ public class BridgeController {
         } catch (IllegalArgumentException e) {
             retry();
         }
+    }
+
+    public void printResult(BridgeGame bridgeGame) {
+        outputView.printResult(bridgeGame);
     }
 }
