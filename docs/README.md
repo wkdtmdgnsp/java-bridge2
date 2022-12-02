@@ -8,7 +8,7 @@
 - [x] 진행중인 다리 출력 기능 -OutputView#printMap()
 - [x] 게임 반복 기능 -BridgeGame#isGameContinue()
 - [x] 재시도 입력 기능 -InputView#readGameCommand()
-- [ ] 재시도 기능 -BridgeGame#retry()
+- [x] 재시도 기능 -BridgeGame#retry()
 - [ ] 최종 결과 출력 기능 -OutputView#printResult()
 - [x] 다리 길이 입력 예외 처리 기능 -UserException#bridgeSizeException()
   - [x] 숫자가 아닌 경우 -UserException#bridgeSizeNumberException()
