@@ -10,6 +10,7 @@ public class BridgeGame {
     private List<String> up = new ArrayList<>();
     private List<String> down = new ArrayList<>();
     private int count = 0;
+    private boolean gameContinue = true;
 
     /**
      * 사용자가 칸을 이동할 때 사용하는 메서드
@@ -19,9 +20,11 @@ public class BridgeGame {
     public void move(List<String> bridge, String move) {
         if (bridge.get(count).contentEquals("U")) {
             moveUp(move);
+            count++;
             return;
         }
         moveDown(move);
+        count++;
     }
 
     private void moveUp(String move) {
@@ -32,6 +35,7 @@ public class BridgeGame {
         }
         up.add(" ");
         down.add("X");
+        gameContinue = false;
     }
 
     private void moveDown(String move) {
@@ -42,6 +46,7 @@ public class BridgeGame {
         }
         up.add("X");
         down.add(" ");
+        gameContinue = false;
     }
 
     public List<String> getUp() {
@@ -50,6 +55,10 @@ public class BridgeGame {
 
     public List<String> getDown() {
         return down;
+    }
+
+    public boolean isGameContinue() {
+        return gameContinue;
     }
 
     /**

@@ -19,9 +19,9 @@ public class BridgeController {
     public void run() {
         System.out.println("다리 건너기 게임을 시작합니다.\n");
         bridgeMake();
-        move();
-        printGame();
-
+        while (bridgeGame.isGameContinue() && bridge.size() > bridgeGame.getUp().size()) {
+            move();
+        }
     }
 
     public void bridgeMake() {
@@ -40,12 +40,9 @@ public class BridgeController {
             System.out.println("이동할 칸을 선택해주세요. (위: U, 아래: D)");
             String move = inputView.readMoving();
             bridgeGame.move(bridge, move);
+            outputView.printMap(bridgeGame);
         } catch (IllegalArgumentException e) {
             move();
         }
-    }
-
-    public void printGame() {
-        outputView.printMap(bridgeGame);
     }
 }
